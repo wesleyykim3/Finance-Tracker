@@ -1,6 +1,9 @@
 import React from 'react'
 
 const PurchaseList = ({purchases, editPurchase, updateCallback}) => {
+
+    const totalAmount = purchases.reduce((total, purchase) => total + parseFloat(purchase.amount), 0)
+   
     const onDelete = async (id) => {
         try {
             const options = {
@@ -44,6 +47,11 @@ const PurchaseList = ({purchases, editPurchase, updateCallback}) => {
                         </td>
                     </tr>
                 ))}
+                <tr>
+                    <td colSpan="2"><strong>Total</strong></td>
+                    <td><strong>{totalAmount.toFixed(2)}</strong></td>
+                    <td></td>
+                </tr>
             </tbody>
         </table>
     </div>
