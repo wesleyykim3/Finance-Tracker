@@ -114,6 +114,7 @@ button.icon-button.delete {
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
+    position: relative;
     width: 80%;
 }
 
@@ -130,13 +131,6 @@ button.icon-button.delete {
 
 .modal-close-button:hover {
     color: darkgray;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
 }
 
 /* Form */
