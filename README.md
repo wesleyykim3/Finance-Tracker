@@ -13,5 +13,5 @@ The Finance Tracker Web Application is a full-stack app that allows users to cre
 
 - **Frontend**: React, HTML, CSS
 - **Backend**: Flask, Python
-- **Database**: SQLite (or other database as configured)
+- **Database**: SQLite 
 
