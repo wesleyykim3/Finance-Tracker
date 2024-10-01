@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PurchaseList = ({purchases, editPurchase, updateCallback}) => {
+const SessionList = ({purchases, editPurchase, updateCallback}) => {
 
     const totalAmount = purchases.reduce((total, purchase) => total + parseFloat(purchase.amount), 0)
    
@@ -57,4 +57,4 @@ const PurchaseList = ({purchases, editPurchase, updateCallback}) => {
     </div>
 }
 
-export default PurchaseList
+export default SessionList

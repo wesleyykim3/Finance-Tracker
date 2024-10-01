@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
-import PurchaseList from './PurchaseList'
+import SessionList from './SessionList'
 import './App.css'
-import PurchaseForm from './PurchaseForm'
+import SessionForm from './SessionForm'
 
 function App() {
   const [purchases, setPurchases] = useState([])
@@ -40,14 +40,14 @@ function App() {
 
   return (
     <>
-      <PurchaseList purchases={purchases} editPurchase={openEditModal} updateCallback={onUpdate} />
+      <SessionList purchases={purchases} editPurchase={openEditModal} updateCallback={onUpdate} />
       <button className="create-button" onClick={openCreateModal}>Create New Purchase</button>
       {isModalOpen && <div className='modal'>
         <div className='modal-content'>
           <button className='modal-close-button' onClick={closeModal}>
             <i className="fas fa-times"></i>
           </button>
-          <PurchaseForm existingPurchase={currentPurchase} updateCallback={onUpdate} />
+          <SessionForm existingPurchase={currentPurchase} updateCallback={onUpdate} />
         </div>
       </div>
       }
