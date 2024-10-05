@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const SessionForm = ({existingPurchase = {}, updateCallback}) => {
+const PurchaseForm = ({existingPurchase = {}, updateCallback}) => {
     const [description, setDescription] = useState(existingPurchase.description || '')
     const [date, setDate] = useState(existingPurchase.date || '')
     const [amount, setAmount] = useState(existingPurchase.amount || '')
@@ -66,4 +66,4 @@ const SessionForm = ({existingPurchase = {}, updateCallback}) => {
     )
 }
 
-export default SessionForm
+export default PurchaseForm

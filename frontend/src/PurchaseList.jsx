@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SessionList = ({purchases, editPurchase, updateCallback}) => {
+const PurchaseList = ({purchases, editPurchase, updateCallback}) => {
 
     const totalAmount = purchases.reduce((total, purchase) => total + parseFloat(purchase.amount), 0)
    
@@ -36,7 +36,7 @@ const SessionList = ({purchases, editPurchase, updateCallback}) => {
                     <tr key={purchase.id}>
                         <td>{purchase.description}</td>
                         <td>{purchase.date}</td>
-                        <td>{purchase.amount}</td>
+                        <td>${purchase.amount}</td>
                         <td>
                         <button className="icon-button edit" onClick={() => editPurchase(purchase)}>
                             <i className="fas fa-pencil-alt"></i>
@@ -49,7 +49,7 @@ const SessionList = ({purchases, editPurchase, updateCallback}) => {
                 ))}
                 <tr>
                     <td colSpan="2"><strong>Total</strong></td>
-                    <td><strong>{totalAmount.toFixed(2)}</strong></td>
+                    <td><strong>${totalAmount.toFixed(2)}</strong></td>
                     <td></td>
                 </tr>
             </tbody>
@@ -57,4 +57,4 @@ const SessionList = ({purchases, editPurchase, updateCallback}) => {
     </div>
 }
 
-export default SessionList
+export default PurchaseList

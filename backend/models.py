@@ -11,5 +11,5 @@ class Purchase(db.Model):
             'id': self.id,
             'description': self.description,
             'date': self.date,
-            'amount': self.amount,
+            'amount': self.amount
         }
